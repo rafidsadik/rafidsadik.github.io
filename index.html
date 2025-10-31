@@ -7,7 +7,33 @@
     <meta name="keywords" content="programmer, developer, python, javascript, react, data analyst">
     <meta name="author" content="Rafid Sadik">
     <title>Rafid Sadik - Developer & Data Analyst</title>
-    <link rel="shortcut icon" href="mcpfp - rafid.png" type="image/x-icon">
+    <script>
+        // 1. Function to check for common mobile device identifiers
+        function isMobileDevice() {
+            // This regular expression checks the User Agent for mobile keywords
+            return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        }
+
+        // 2. If a mobile device is detected, replace the entire document content
+        if (isMobileDevice()) {
+            document.write(
+                '<style>' +
+                    'body { font-family: sans-serif; text-align: center; padding: 50px; background-color: #f4f4f4; }' +
+                    'div { border: 2px solid #cc0000; padding: 20px; background-color: #ffe0e0; margin-top: 50px; }' +
+                '</style>' +
+                '<body>' +
+                    '<div>' +
+                        '<h2>⛔ Mobile Access Restricted</h2>' +
+                        '<p>Sorry! This website is only designed to be viewed on a **desktop or laptop computer**.</p>' +
+                        '<p>Please access the site on a larger screen.</p>' +
+                    '</div>' +
+                '</body>'
+            );
+            // This stops the rest of the original HTML page from loading/parsing
+            document.close(); 
+        }
+    </script>
+    <link rel="shortcut icon" href="fake-rafid.png" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
     <noscript><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
