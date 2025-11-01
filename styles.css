@@ -559,3 +559,136 @@ section {
   font-weight: 600;
   white-space: nowrap;
 }
+
+/* Mobile / Tablet responsive fixes */
+@media (max-width: 900px) {
+  body {
+    overflow: auto; 
+    flex-direction: column;
+  }
+
+  .hero {
+    position: relative;
+    right: auto;
+    top: auto;
+    width: 100%;
+    height: auto;
+    padding: 2rem 1rem;
+    align-items: center;
+  }
+
+  .hero-content {
+    max-width: 360px;
+    margin: 0 auto 1.5rem;
+  }
+
+  .profile-img {
+    width: 140px;
+    height: 140px;
+    margin-bottom: 18px;
+  }
+
+  .main-content,
+  .right-corner {
+    margin-left: 0;
+    width: 100%;
+    height: auto;
+    padding: 0 1rem 3rem;
+  }
+
+  section {
+    padding: 60px 0;
+  }
+
+  .section-title {
+    white-space: normal;
+    font-size: clamp(22px, 5vw, 32px);
+  }
+
+  .section-title::after {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 8px;
+  }
+
+  .experience-content {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .experience-tabs {
+    flex-direction: row;
+    min-width: auto;
+    overflow-x: auto;
+    gap: 8px;
+    padding-bottom: 8px;
+    border-left: none;
+    border-bottom: 1px solid var(--lightest-navy);
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .tab-button {
+    border-left: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    padding: 8px 12px;
+    min-width: auto;
+    font-size: 13px;
+  }
+
+  .tab-button.active {
+    border-bottom-color: var(--green);
+    border-left: none;
+    background-color: transparent;
+  }
+
+  .experience-panels {
+    width: 100%;
+  }
+
+  .project-details li {
+    font-size: 16px;
+  }
+
+  .project-links {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .project-link {
+    padding: 8px 12px;
+  }
+  .social-links {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 12px;
+    max-width: 600px;
+    margin-top: 30px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .hero-content {
+    max-width: 300px;
+    padding: 0 6px;
+  }
+
+  .profile-img {
+    width: 112px;
+    height: 112px;
+  }
+
+  .section-title {
+    font-size: 20px;
+  }
+
+  .project-details li {
+    padding-left: 20px;
+    font-size: 15px;
+  }
+
+  .social-link {
+    padding: 12px 10px;
+    font-size: 13px;
+  }
+}
