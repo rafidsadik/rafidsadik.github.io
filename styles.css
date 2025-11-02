@@ -1,4 +1,3 @@
-/* CSS Variables */
 :root {
     /* Dark Theme Colors */
     --navy: #000000;
@@ -498,23 +497,24 @@ section {
   box-shadow: 0 10px 30px -15px var(--green);
 }
 
-.social-link[data-platform="GitHub"]:hover {
-  color: #ffffff;
-  border-color: #333;
+.social-link[data-platform="Contact"]:hover {
+  color: #87e7ff;
+  border-color: #59e9ee;
   box-shadow: 0 10px 30px -15px rgba(51, 51, 51, 0.5);
 }
 
-.social-link[data-platform="LinkedIn"]:hover {
-  color: #0077b5;
-  border-color: #0077b5;
-  box-shadow: 0 10px 30px -15px rgba(0, 119, 181, 0.5);
+.social-link[data-platform="Email"]:hover {
+  color: #ff7171;
+  border-color: #f15960;
+  box-shadow: 0 10px 30px -15px rgba(51, 51, 51, 0.5);
 }
 
-.social-link[data-platform="Bluesky"]:hover {
-  color: #00bcd4;
-  border-color: #00bcd4;
-  box-shadow: 0 10px 30px -15px rgba(0, 188, 212, 0.5);
+.social-link[data-platform="GitHub"]:hover {
+  color: #ffffff;
+  border-color: #ffffff;
+  box-shadow: 0 10px 30px -15px rgba(51, 51, 51, 0.5);
 }
+
 
 .social-link[data-platform="Twitter"]:hover {
   color: #1da1f2;
@@ -522,23 +522,6 @@ section {
   box-shadow: 0 10px 30px -15px rgba(29, 161, 242, 0.5);
 }
 
-.social-link[data-platform="Codewars"]:hover {
-  color: #b1361e;
-  border-color: #b1361e;
-  box-shadow: 0 10px 30px -15px rgba(177, 54, 30, 0.5);
-}
-
-.social-link[data-platform="LeetCode"]:hover {
-  color: #ffa116;
-  border-color: #ffa116;
-  box-shadow: 0 10px 30px -15px rgba(255, 161, 22, 0.5);
-}
-
-.social-link[data-platform="Website"]:hover {
-  color: var(--green);
-  border-color: var(--green);
-  box-shadow: 0 10px 30px -15px var(--green);
-}
 
 .social-link[data-platform="Medium"]:hover {
   color: #00ab6c;
@@ -560,13 +543,13 @@ section {
   white-space: nowrap;
 }
 
-/* Mobile / Tablet responsive fixes */
 @media (max-width: 900px) {
   body {
-    overflow: auto; 
+    overflow: auto; /* allow scrolling on small screens */
     flex-direction: column;
   }
 
+  /* Make hero flow with document (no fixed split layout) */
   .hero {
     position: relative;
     right: auto;
@@ -588,6 +571,7 @@ section {
     margin-bottom: 18px;
   }
 
+  /* Let sections stack beneath hero */
   .main-content,
   .right-corner {
     margin-left: 0;
@@ -611,6 +595,7 @@ section {
     margin-top: 8px;
   }
 
+  /* Experience/tabs -> stack vertically, tabs become horizontal short list */
   .experience-content {
     flex-direction: column;
     gap: 24px;
@@ -658,6 +643,8 @@ section {
   .project-link {
     padding: 8px 12px;
   }
+
+  /* Social buttons: smaller and center */
   .social-links {
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     gap: 12px;
